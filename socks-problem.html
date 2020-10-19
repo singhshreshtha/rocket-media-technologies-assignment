@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var ar = [];
+      var size = window.prompt();
+      var count = 0;
+
+      let input = prompt();
+      ar = input.split(" ");
+
+      for(let i = 0; i < size; i++) {
+        if(ar[i] != 0) {
+          for(let j=i+1; j<size; j++) {
+            if(ar[i] === ar[j]) {
+              count++;
+              ar[j] = 0;
+              break;
+            }
+          }
+        }
+      }
+
+      document.write(count);
+  </script>
+  </body>
+</html>
